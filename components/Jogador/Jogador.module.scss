@@ -1,0 +1,23 @@
+@import "@/styles/variaveis";
+.btn{
+    border: 1px solid $primaryColor;
+    background-color: $primaryColor;
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #fff;
+    a {
+        font-size: 1.2em;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+.input{
+    margin: 20px 0 40px;
+}
