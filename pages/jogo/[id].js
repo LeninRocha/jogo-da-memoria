@@ -6,6 +6,8 @@ import uuid from 'react-uuid';
 import React, { useEffect, useState } from 'react';
 import Score from '@/components/Score/Score';
 import ModalCandidato from '@/components/ModalCandidato/ModalCandidato';
+import Endgame from '@/components/Endgame/Endgame';
+import Header from '@/components/Header/Header';
 const index = ({ deputados }) => {
 
     const [cardFlip, setCardFlip] = useState([])
@@ -53,12 +55,14 @@ const index = ({ deputados }) => {
 
     return (
         <main>
+            <Header/>
             <Container >
                 <Row>
                     <Col md="9">
+                        {gameOver ? (<Endgame/>) :(
                         <Row>
                             {deputados.map((deputados, i) => (
-
+                            
                                 <Card
                                     key={uuid()}
                                     src={deputados.urlFoto}
@@ -70,11 +74,17 @@ const index = ({ deputados }) => {
                                 />
                             ))}
                         </Row>
-                        {gameOver && (<div>vc ganhou!</div>)}
+                        )
+                        }
+
+                        
                     </Col>
                     <Col md="3">
-                        <Cronometro start={start}/>
-                        <Score />
+                        <Cronometro
+                        start={start}
+                        gameover={gameOver}
+                        />
+                        <Score gameover={gameOver}/>
                     </Col>
                 </Row>
                 

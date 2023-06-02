@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styles from './Jogador.module.scss'
-import Link from 'next/link'
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import { useRouter } from 'next/router';
@@ -19,6 +18,7 @@ function Jogador() {
         e.preventDefault();
         
         if(level !== '' && user !== ''){
+            localStorage.setItem('jogador', user)
             router.push("/jogo/"+level);
         }else{
             setErro(true)

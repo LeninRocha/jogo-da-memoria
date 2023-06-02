@@ -32,6 +32,9 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-image: $image-home;
+        @media (max-width: 980px) {
+            display: none;
+        }
     }
 
     h1 {

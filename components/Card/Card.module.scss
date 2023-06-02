@@ -1,6 +1,30 @@
-.img{
-    width: calc(100%);
-    padding: 5px;
-    box-sizing: border-box;
-    cursor: pointer;
+
+.card{
+    .img{
+        width: calc(100%);
+        padding: 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+        transform: rotateY(0deg);
+    }
+    .imgfront{
+        display: none;
+    }
+    .imgback{
+        transform: rotateY(0deg);
+    }
+    &.active{
+        .imgfront{
+            display: block;
+            transform: rotateY(180deg);
+            pointer-events: none; 
+        }
+        .imgback{
+            display: none;
+            transform: rotateY(180deg);
+        }
+    }
+
 }
+

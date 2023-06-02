@@ -3,13 +3,14 @@ import styles from './index.module.scss'
 
 import {Container} from 'react-bootstrap'
 import Jogador from '@/components/Jogador/Jogador'
+import Header from '@/components/Header/Header'
 
 const index = () => {
   return (
     <main>
+        <Header/>
         <Container>
-            <div className={styles.w100}><div className={styles.logo}></div></div>
-            <div className={styles.w50}>
+            <div className={styles.w50} sm={12}>
 
                 <h1 className={styles.title}>
                     Jogo da memória<br/>
@@ -18,10 +19,8 @@ const index = () => {
                 <Jogador/>
 
             </div>
-            <div className={styles.w50}>
-                <div className={styles.fundo}>
-
-                </div>
+            <div className={styles.w50} sm={12}>
+                <div className={styles.fundo}></div>
             </div>
         </Container>
     </main>

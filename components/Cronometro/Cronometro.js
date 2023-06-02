@@ -1,32 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Cronometro.module.scss'
+import utils from '../../utils/utils'
 function Cronometro(props) {
     const [seconds, setSeconds] = useState(0);
     useEffect(() => {
-        if(props.start){
+        if (props.start) {
             const intervalId = setInterval(() => {
                 setSeconds(prevSeconds => prevSeconds + 1);
             }, 1000);
-    
+
             return () => {
                 clearInterval(intervalId);
             };
         }
-    }, [props.start]);
-
-    const formatTime = (time) => {
-        const minutes = Math.floor(time / 60);
-        const seconds = time % 60;
-
-        const formattedMinutes = String(minutes).padStart(2, '0');
-        const formattedSeconds = String(seconds).padStart(2, '0');
-
-        return `${formattedMinutes}:${formattedSeconds}`;
-    };
+        if (props.gameover) {
+            let jogador = localStorage.getItem('jogador')
+            let minhaLista = localStorage.getItem('score');
+            let scoreSalvos = JSON.parse(minhaLista) || [];
+            let user = {
+                jogador: jogador,
+                time: seconds,
+            }
+            scoreSalvos.push(user)
+            localStorage.setItem('score', JSON.stringify(scoreSalvos))
+        }
+    }, [props.start, props.gameover]);
     return (
         <div className={styles.wrap}>
             <h1 className={styles.title}>Tempo</h1>
-            <p className={styles.contador}>{formatTime(seconds)}</p>
+            <p className={styles.contador}>{utils.formatTime(seconds)}</p>
         </div>
     )
 }
