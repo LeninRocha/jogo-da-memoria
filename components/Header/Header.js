@@ -7,7 +7,7 @@ function Header() {
     <>
       <Navbar >
         <Container>
-          <Navbar.Brand href="#home" className={styles.color}>Jogo da<br/>Memória</Navbar.Brand>
+          <Navbar.Brand href="/" className={styles.logo}></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/" className={styles.color}>Início</Nav.Link>
             <Nav.Link href="/sobre" className={styles.color}>Sobre</Nav.Link>

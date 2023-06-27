@@ -1,6 +1,12 @@
+@import "@/styles/variaveis";
 .color{
     color: #347571 !important;
     &:hover{
         opacity: .8;
     }
+}
+.logo{
+    background-image: $logo;
+    width: 100px;
+    height: 100px;
 }

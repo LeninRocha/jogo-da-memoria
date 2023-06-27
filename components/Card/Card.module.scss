@@ -7,6 +7,7 @@
         cursor: pointer;
         transition: transform 0.5s ease;
         transform: rotateY(0deg);
+        border-radius: 20px;
     }
     .imgfront{
         display: none;
@@ -15,10 +16,11 @@
         transform: rotateY(0deg);
     }
     &.active{
+        pointer-events: none; 
         .imgfront{
             display: block;
             transform: rotateY(180deg);
-            pointer-events: none; 
+
         }
         .imgback{
             display: none;

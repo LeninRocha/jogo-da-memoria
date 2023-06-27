@@ -8,8 +8,7 @@ import Score from '@/components/Score/Score';
 import ModalCandidato from '@/components/ModalCandidato/ModalCandidato';
 import Endgame from '@/components/Endgame/Endgame';
 import Header from '@/components/Header/Header';
-const index = ({ deputados }) => {
-
+const index = ({ deputados, level }) => {
     const [cardFlip, setCardFlip] = useState([])
     const [achou, setAchou] = useState([])
     const [gameOver, setGameOver] = useState(false)
@@ -60,7 +59,7 @@ const index = ({ deputados }) => {
                 <Row>
                     <Col md="9">
                         {gameOver ? (<Endgame/>) :(
-                        <Row>
+                        <Row className="justify-content-center">
                             {deputados.map((deputados, i) => (
                             
                                 <Card
@@ -83,8 +82,12 @@ const index = ({ deputados }) => {
                         <Cronometro
                         start={start}
                         gameover={gameOver}
+                        level={level}    
                         />
-                        <Score gameover={gameOver}/>
+                        <Score 
+                            gameover={gameOver}
+                            level={level}    
+                        />
                     </Col>
                 </Row>
                 
@@ -113,9 +116,8 @@ export async function getServerSideProps(context) {
     //array aleatorio
     const randomComparator = () => Math.random() - 0.5;
     const deputados = arrayConcat.sort(randomComparator);
-
     return {
-        props: { deputados },
+        props: { deputados, level },
     }
 }
 

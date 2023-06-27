@@ -15,16 +15,16 @@ function Cronometro(props) {
         }
         if (props.gameover) {
             let jogador = localStorage.getItem('jogador')
-            let minhaLista = localStorage.getItem('score');
+            let minhaLista = localStorage.getItem('score'+props.level);
             let scoreSalvos = JSON.parse(minhaLista) || [];
             let user = {
                 jogador: jogador,
                 time: seconds,
             }
             scoreSalvos.push(user)
-            localStorage.setItem('score', JSON.stringify(scoreSalvos))
+            localStorage.setItem('score'+props.level , JSON.stringify(scoreSalvos))
         }
-    }, [props.start, props.gameover]);
+    }, [props.start, props.gameover, ]);
     return (
         <div className={styles.wrap}>
             <h1 className={styles.title}>Tempo</h1>
