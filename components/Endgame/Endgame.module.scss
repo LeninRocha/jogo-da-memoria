@@ -9,11 +9,13 @@
     width: fit-content;
     padding: 10px 30px;
     border-radius: 50px;
+    padding: 10px;
     a{
         font-size: 1.2em;
         color: #fff;
         font-weight: 600;
         text-decoration: none;
+        font-family: 'Monospace'
     }
 }
 .ganhou{
@@ -21,4 +23,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 90px;
 }

@@ -5,7 +5,7 @@ function Endgame() {
 
         <div className={styles.wrap}>
             <div className={styles.ganhou}>
-                <h1>Você Ganhouuuu!</h1>
+                <h1>Parabéns, você ganhou!</h1>
                 <button className={styles.btnHome}>
                     <Link href="/">Jogar novamente</Link>
                 </button>

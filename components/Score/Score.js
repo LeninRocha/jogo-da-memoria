@@ -22,7 +22,7 @@ function Score(props) {
     return (
 
         <div className={styles.wrap}>
-            <h2 className={styles.title}>Histórico - {nivel}</h2>
+            <h2 className={styles.title}>Level - {nivel}</h2>
             <div className={styles.header}>
                 <span>Jogador</span>
                 <span>Tempo</span>

@@ -54,7 +54,7 @@ function Jogador() {
             </button>
             {erro && 
                 (
-                    <div className="erro">Por favor, preencha os campos!</div>
+                    <div className="erro" style={{padding: 8, color: 'red'}}>Por favor, preencha o campo nome!</div>
                 )
             }
         </form>

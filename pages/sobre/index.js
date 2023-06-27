@@ -7,7 +7,7 @@ const index = () => {
             <Header/>
             <Container >
                 <Row>
-                    <h1>Jogo da Memória dos Deputados Brasileiros</h1>
+                    <h1 style={{padding: 15, textAlign: 'center'}}>Jogo da Memória dos Deputados Brasileiros</h1>
                     <p>No atual cenário político brasileiro, é cada vez mais importante incentivar a participação e o interesse dos jovens pela política. Uma maneira eficaz de alcançar esse objetivo é por meio da educação e do entretenimento. Nesse contexto, a criação de um jogo da memória com os deputados brasileiros voltado para jovens se mostra como uma ferramenta relevante para promover o conhecimento político desde cedo, despertando o interesse pela atuação parlamentar e fortalecendo a consciência cidadã.</p>
                     <p>Aproximação dos jovens com a política: Os jovens muitas vezes se sentem distantes da política, seja por falta de interesse, por desconhecimento ou até mesmo por descrença nas instituições políticas. Um jogo da memória com os deputados brasileiros pode ser um meio atraente de aproximar essa parcela da população da realidade política, tornando-a mais acessível e tangível.</p>
                     <p>Estímulo ao conhecimento político: Ao jogar o jogo da memória, os jovens seriam expostos aos rostos e nomes dos deputados, o que poderia incentivar a curiosidade e o interesse em descobrir mais sobre eles. Isso poderia levar a uma busca por informações adicionais, como suas posições políticas, projetos de lei apresentados e atuação na Câmara dos Deputados. Assim, o jogo se torna uma porta de entrada para o mundo político.</p>
